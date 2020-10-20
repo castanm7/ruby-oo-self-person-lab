@@ -1,4 +1,4 @@
- require 'pry'
+
 class Person
     attr_accessor :bank_account, :friend
     attr_reader :name, :happiness, :hygiene
@@ -25,17 +25,11 @@ class Person
     end
 
     def clean?
-       if @hygiene > 7 
-        true
-       else false
-       end 
+        @hygiene > 7
     end
 
     def happy?
-        if @happiness > 7 
-         true
-        else false
-        end 
+        @happiness > 7
      end
 
      def get_paid(salary)
@@ -58,7 +52,6 @@ class Person
         @friend = friend
         self.happiness +=3
         friend.happiness +=3
-        binding.pry
         return "Hi #{friend.name}! It's #{name}. How are you?"
 
      end
